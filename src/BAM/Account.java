@@ -1,5 +1,8 @@
 package BAM;
-
+/*
+ *  账户类:包含两种账户类型-->1.储蓄账户 2.信用账户 
+ *
+ */
 public class Account {
 	private long id;
 	private String pass;
@@ -89,27 +92,5 @@ public class Account {
 	protected void setBalance(double balance) {
 		this.balance = balance;
 	}
-}
-/*
- * 第三部分:(继承,多态)  
- * 银行的客户分为两类,储蓄账户(SavingAccount)和信用账户(CreditAccount),
- * 区别在于储蓄账户不允许透支,而信用账户可以透支,并允许用户设置自己的透支额度.  
- * 注意:CreditAccount需要多一个属性 ceiling 透支额度  
- */
-class SavingAccount extends Account{
-	
-}
-
-class CreditAccount extends Account{
-	private double ceiling;
-
-	public double getCeiling() {
-		return ceiling;
-	}
-
-	public void setCeiling(double ceiling) {
-		this.ceiling = ceiling;
-	}
-
 }
 
