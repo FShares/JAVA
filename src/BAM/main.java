@@ -1,6 +1,6 @@
 package BAM;
 /*
- * 项目名称:BankAccount Management System 银行账户管理系统 简称BAM 
+ * 椤圭洰鍚嶇О:BankAccount Management System 閾惰璐︽埛绠＄悊绯荤粺 绠�绉癇AM 
  */
 //				http://blog.csdn.net/bao2516090/article/details/8153202
 public class main {

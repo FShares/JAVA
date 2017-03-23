@@ -3,23 +3,23 @@ package BAM;
 public class Account {
 	private long id;
 	private String pass;
-	private String name;	//ÕæÊµĞÕÃû 
-	private String personID;//Éí·İÖ¤ºÅÂë×Ö·û´®ÀàĞÍ
+	private String name;	//çœŸå®å§“å 
+	private String personID;//èº«ä»½è¯å·ç å­—ç¬¦ä¸²ç±»å‹
 	private String email;
 	private double balance;
 	
 	protected double deposit(double money){
-		//´æ¿î·½·¨
+		//å­˜æ¬¾æ–¹æ³•
 		return money;
 	}
 
 	protected double withdraw(double money){
-		//È¡¿î·½·¨
+		//å–æ¬¾æ–¹æ³•
 		return money;
 	}
 	/*
-	 * ¹¹Ôì·½·¨: ÓĞ²ÎºÍÎŞ²Î
-	 * ÓĞ²Î¹¹Ôì·½·¨ÓÃÓÚÉèÖÃ±ØÒªµÄÊôĞÔ  
+	 * æ„é€ æ–¹æ³•: æœ‰å‚å’Œæ— å‚
+	 * æœ‰å‚æ„é€ æ–¹æ³•ç”¨äºè®¾ç½®å¿…è¦çš„å±æ€§  
 	 */
 	Account(){
 		this.id = 0;
@@ -40,7 +40,7 @@ public class Account {
 	}
 
 	/*
-	 * (·â×°) ½«AccountÀà×÷³ÉÍêÈ«·â×°,×¢Òâ:Òª±æ±ğÃ¿¸öÊôĞÔµÄset/get·½·¨ÊÇ·ñĞèÒª¹«¿ª  
+	 * (å°è£…) å°†Accountç±»ä½œæˆå®Œå…¨å°è£…,æ³¨æ„:è¦è¾¨åˆ«æ¯ä¸ªå±æ€§çš„set/getæ–¹æ³•æ˜¯å¦éœ€è¦å…¬å¼€  
 	 */
 	public long getId() {
 		return id;
@@ -91,10 +91,10 @@ public class Account {
 	}
 }
 /*
- * µÚÈı²¿·Ö:(¼Ì³Ğ,¶àÌ¬)  
- * ÒøĞĞµÄ¿Í»§·ÖÎªÁ½Àà,´¢ĞîÕË»§(SavingAccount)ºÍĞÅÓÃÕË»§(CreditAccount),
- * Çø±ğÔÚÓÚ´¢ĞîÕË»§²»ÔÊĞíÍ¸Ö§,¶øĞÅÓÃÕË»§¿ÉÒÔÍ¸Ö§,²¢ÔÊĞíÓÃ»§ÉèÖÃ×Ô¼ºµÄÍ¸Ö§¶î¶È.  
- * ×¢Òâ:CreditAccountĞèÒª¶àÒ»¸öÊôĞÔ ceiling Í¸Ö§¶î¶È  
+ * ç¬¬ä¸‰éƒ¨åˆ†:(ç»§æ‰¿,å¤šæ€)  
+ * é“¶è¡Œçš„å®¢æˆ·åˆ†ä¸ºä¸¤ç±»,å‚¨è“„è´¦æˆ·(SavingAccount)å’Œä¿¡ç”¨è´¦æˆ·(CreditAccount),
+ * åŒºåˆ«åœ¨äºå‚¨è“„è´¦æˆ·ä¸å…è®¸é€æ”¯,è€Œä¿¡ç”¨è´¦æˆ·å¯ä»¥é€æ”¯,å¹¶å…è®¸ç”¨æˆ·è®¾ç½®è‡ªå·±çš„é€æ”¯é¢åº¦.  
+ * æ³¨æ„:CreditAccountéœ€è¦å¤šä¸€ä¸ªå±æ€§ ceiling é€æ”¯é¢åº¦  
  */
 class SavingAccount extends Account{
 	
