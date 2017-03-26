@@ -20,18 +20,29 @@ package BAM;
  */
 public class Bank {
 	private Account[] accounts = new Account[20];
-	private int AccountCount; // 账户数目
-	private int id = 1001;// 确定银行账号从1001开始生成，即第一个账户的账号是1001
+	private static int AccountCount; // 账户数目
+	private static int id = 1001;// 确定银行账号从1001开始生成，即第一个账户的账号是1001
 	// 构造函数
 
 	public Bank() {
 		accounts = new Account[20];// 以后不足时扩容。
 		int number = 0;
 	}
-
-	Account userCreate(long id, String pass, String name, String personID, String email, double balance) {
-		Account A1 = new Account();
-		AccountCount++;
-		return A1;
+	public static Account userCreate(String pass1,String pass2, String name, String personID, String email,int type) {
+	// 1.用户开户,需要的参数:id,密码,密码确认,姓名,身份证号码,邮箱,账户类型(int),返回新创建的Account对象 
+		//创建一个新账户 
+		Account account = null;
+		if(pass1.equals(pass2)){
+			//若一致，再判断账户类型（根据type的值） 
+			if(type==1){
+				//可令开始余额为10,信用额度为5000 
+				account = new CreditAccount();
+//				account = new CreditAccount(id, pass1, name, personID, type, 10, 5000); 
+			}else{
+				
+			}
+			AccountCount++;
+		}
+		return account;
 	}
 }
