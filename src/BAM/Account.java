@@ -24,7 +24,7 @@ public class Account {
 	 * 构造方法: 有参和无参
 	 * 有参构造方法用于设置必要的属性  
 	 */
-	Account(long id2, String password, String name2, String personID, int accountType, double balance2){
+	Account(long id2, String pass, String name2, String personID, int accountType, double balance2){
 		this.id = 0;
 		this.pass = "";
 		this.name = "";

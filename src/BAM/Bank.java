@@ -28,21 +28,25 @@ public class Bank {
 		accounts = new Account[20];// 以后不足时扩容。
 		int number = 0;
 	}
-	public static Account userCreate(String pass1,String pass2, String name, String personID, String email,int type) {
-	// 1.用户开户,需要的参数:id,密码,密码确认,姓名,身份证号码,邮箱,账户类型(int),返回新创建的Account对象 
-		//创建一个新账户 
+
+	public static Account userCreate(String pass1, String pass2, String name, String personID, String email, int type) {
+		System.out.println(pass1 + pass2 + name + personID + email + type);
+		// 1.用户开户,需要的参数:id,密码,密码确认,姓名,身份证号码,邮箱,账户类型(int),返回新创建的Account对象
+		// 创建一个新账户
 		Account account = null;
-		if(pass1.equals(pass2)){
-			//若一致，再判断账户类型（根据type的值） 
-			if(type==1){
-				//可令开始余额为10,信用额度为5000 
+		if (pass1.equals(pass2)) {
+			// 若一致，再判断账户类型（根据type的值）
+			if (type == 1) {
+				// 可令开始余额为10,信用额度为5000
 				account = new CreditAccount();
-//				account = new CreditAccount(id, pass1, name, personID, type, 10, 5000); 
-			}else{
-				
+				// account = new CreditAccount(id, pass1, name, personID, type,
+				// 10, 5000);
+			} else {
+				account = new SaveAccount(id, pass1, name, personID, type, 10);
 			}
 			AccountCount++;
 		}
 		return account;
 	}
+
 }
