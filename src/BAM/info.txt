@@ -71,4 +71,4 @@ LoginException:用户登录异常的情况,例如id错误,密码错误
 实现把账户信息写在XML文件里,而不再采用对象序列化的方式.并用DAO去访问XML文件,即,为AccountDao接口添加一个实现类AccountXmlDao
  
  
- 
+                
