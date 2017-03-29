@@ -22,34 +22,34 @@ public class bam {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("请选择：");
 		int choice = scanner.nextInt();
-		switch (choice) {
+		switch (choice) {	//一级菜单
 		case 1:
 			scanner = new Scanner(System.in);
 			System.out.println("请输入银行卡号：");
 			String ID = scanner.next();
 			System.out.println("请输入银行密码：");
 			String password = scanner.next();
-			System.out.println("ID: "+ID +"\npassword: "+password );
+			System.out.println("ID: " + ID + "\npassword: " + password);
 			break;
 		case 2:
-			//账号id由银行自动提供（从1001递增）
+			// 账号id由银行自动提供（从1001递增）
 			System.out.println("请输入账户密码：");
-			String passwd1 = scanner.next(); 
+			String passwd1 = scanner.next();
 			System.out.println("输再次输入账户密码：");
 			String passwd2 = scanner.next();
-			scanner = new Scanner(System.in); 
+			scanner = new Scanner(System.in);
 			System.out.print("请输入户主姓名：");
 			String name = scanner.next();
 			scanner = new Scanner(System.in);
 			System.out.print("请输入户主身份证号码：");
-			String personID = scanner.next(); 
+			String personID = scanner.next();
 			System.out.println("请输入户主邮箱地址：");
 			String email = scanner.next();
-			scanner = new Scanner(System.in); 
-			System.out.print("请输入账户类型（0储蓄，1信用）："); 
+			scanner = new Scanner(System.in);
+			System.out.print("请输入账户类型（0储蓄，1信用）：");
 			int type = scanner.nextInt();
-			Bank.userCreate(passwd1,passwd2, name, personID, email, type);
-			break; 
+			Bank.userCreate(passwd1, passwd2, name, personID, email, type);
+			break;
 		case 3:
 			break;
 		default:
@@ -57,11 +57,11 @@ public class bam {
 			break;
 		}
 
-	/*
-	 * 开户 需要的参数:id,密码,密码确认,姓名,身份证号码,邮箱,账户类型(int),返回新创建的Account对象
-	 */
-
-}}
+		/*
+		 * 开户 需要的参数:id,密码,密码确认,姓名,身份证号码,邮箱,账户类型(int),返回新创建的Account对象
+		 */
+	}
+}
 
 /*
  *
