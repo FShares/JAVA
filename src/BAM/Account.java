@@ -1,4 +1,5 @@
 package BAM;
+
 /*
  *  账户类:包含两种账户类型-->1.储蓄账户 2.信用账户 
  *
@@ -6,42 +7,28 @@ package BAM;
 public class Account {
 	private long id;
 	private String pass;
-	private String name;	//真实姓名 
-	private String personID;//身份证号码字符串类型
+	private String name; 				// 真实姓名
+	private String personID;			// 身份证号码字符串类型
 	private String email;
 	private double balance;
-	
-	protected double deposit(double money){
-		//存款方法
-		return money;
-	}
+	private int accountType;
 
-	protected double withdraw(double money){
-		//取款方法
-		return money;
-	}
-	/*
-	 * 构造方法: 有参和无参
-	 * 有参构造方法用于设置必要的属性  
+	/*	
+	 * 构造方法: 有参和无参 有参构造方法用于设置必要的属性
 	 */
-	Account(long id2, String pass, String name2, String personID, int accountType, double balance2){
-		this.id = 0;
-		this.pass = "";
-		this.name = "";
-		this.personID = "";
-		this.email = "";
-		this.balance = 0;
+	public Account() {
+		super();
 	}
-	Account(){
-		this.id = 0;
-		this.pass = "";
-		this.name = "";
-		this.personID = "";
-		this.email = "";
-		this.balance = 0;
-	}
-	Account(long id, String pass, String name, String personID, String email, long balance){
 
+	protected int getAccountType() {
+		return accountType;
+	}
+
+	protected void setAccountType(int accountType) {
+		this.accountType = accountType;
+	}
+
+	Account(long id, String pass, String name, String personID, String email, int accountType, long balance) {
 		this.id = id;
 		this.pass = pass;
 		this.name = name;
@@ -50,10 +37,20 @@ public class Account {
 		this.balance = balance;
 	}
 
+	protected double deposit(double money) {
+		// 存款方法
+		return money;
+	}
+
+	protected double withdraw(double money) {
+		// 取款方法
+		return money;
+	}
+
 	/*
-	 * (封装) 将Account类作成完全封装,注意:要辨别每个属性的set/get方法是否需要公开  
+	 * (封装) 将Account类作成完全封装,注意:要辨别每个属性的set/get方法是否需要公开
 	 */
-	public long getId() {
+	protected long getId() {
 		return id;
 	}
 
@@ -101,4 +98,3 @@ public class Account {
 		this.balance = balance;
 	}
 }
-

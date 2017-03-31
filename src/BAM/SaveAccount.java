@@ -9,7 +9,8 @@ public class SaveAccount extends Account {
 		super();
 	}
 
-	public SaveAccount(long id, String password, String name, String personId, int accountType, double balance) {
-		super(id, password, name, personId, accountType, balance);
+	public SaveAccount(long id, String pass, String name, String personID, String email, int accountType,
+			long balance) {
+		super(id, pass, name, personID, email, accountType, balance);
 	}
 }
